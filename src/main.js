@@ -1,5 +1,6 @@
 import "./style.css";
+import { makeUI } from "./UI";
 
 document.querySelector('#add-item').addEventListener('click', () => {
-    alert("This works!")
+    makeUI();
 })
