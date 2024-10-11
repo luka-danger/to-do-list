@@ -1,3 +1,5 @@
+import { render } from "./Render";
+
 export function makeUI() {
     let openDialog = document.createElement('dialog');
     openDialog.className = 'dialog-box';
@@ -36,15 +38,16 @@ export function makeUI() {
     dueDateInput.name = 'due-date';
     dueDateInput.required = true;
 
-    // Create buttons
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
+    submitButton.id = 'submit-btn'
     submitButton.textContent = 'Submit';
+    submitButton.addEventListener('click', render)
 
     const cancelButton = document.createElement('button');
     cancelButton.type = 'button';
     cancelButton.textContent = 'Cancel';
 
-    // Append elements to form
     webForm.append(titleLabel, titleInput, descriptionLabel, descriptionInput, dueDateLabel, dueDateInput, submitButton, cancelButton);
 }
+
