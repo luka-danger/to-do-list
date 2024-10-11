@@ -27,7 +27,6 @@ export function makeUI() {
     descriptionInput.type = 'text';
     descriptionInput.id = 'description';
     descriptionInput.name = 'description';
-    descriptionInput.required = true;
 
     const dueDateLabel = document.createElement('label');
     dueDateLabel.setAttribute('for', 'due-date');
@@ -36,7 +35,6 @@ export function makeUI() {
     dueDateInput.type = 'date';
     dueDateInput.id = 'due-date';
     dueDateInput.name = 'due-date';
-    dueDateInput.required = true;
 
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
