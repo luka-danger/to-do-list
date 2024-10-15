@@ -2,6 +2,7 @@
 import { render } from "./Render.js";
 import { makeDialog } from "./Dialog.js";
 import { addSampleTasks } from "./SampleTask.js";
+import { clearList } from "./Clear.js";
 import List from "./List.js";
 import "./style.css"
 
@@ -23,13 +24,4 @@ export function loadTasks() {
             new List(task.title, task.description, task.hasCompleted)
         );
     }
-}
-
-export function clearList() {
-    const clearButton = document.querySelector('#clear-task-btn');
-    clearButton.addEventListener('click', () => {
-        localStorage.removeItem('myList');
-        myList = []
-        render();
-    });
 }
