@@ -17,7 +17,9 @@ export function render() {
         <div class="list-body">
             <p class="description">${listItem.description}</p>
             <p class="complete-status ${listItem.hasCompleted ? 'complete' : 'incomplete'}"> ${listItem.hasCompleted ? "Complete" : "Incomplete"}</p>
-            <button class="toggle-complete-btn" onclick="toggleComplete(${i})">Complete Task</button>
+            <button class="toggle-complete-btn" onclick="toggleComplete(${i})">
+                ${listItem.hasCompleted ? 'Make Incomplete' : 'Complete Task'}
+            </button>
             <button class="remove-btn" onclick="removeTask(${i})">Remove Task</button>
         </div>
         `;
