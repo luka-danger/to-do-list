@@ -1,12 +1,25 @@
-import { makeUI } from "./UI"
+import { myList } from "./main";
 
 export function render() {
-    const listContainer = document.querySelector('.list-container')
 
-    const myList = document.createElement('h1');
-    listContainer.appendChild(myList)
+    let taskItem = document.querySelector('#tasks');
+    taskItem.innerHTML = "";
 
-    const titleInput = document.getElementById('title');
-    myList.textContent = titleInput.value
-    alert(`${titleInput.value}`)
+    for (let i = 0; i < myList.length; i++) {
+        let listItem = myList[i];
+        let listElement = document.createElement('div');
+        listElement.setAttribute("class", "list-card");
+        listElement.innerHTML = `
+        <div class="list-header">
+            <h3 class="title">${listItem.title}</h3>
+        </div>
+        <div class="list-body">
+            <p class="description">${listItem.description}</p>
+            <p class="complete-status ${listItem.hasCompleted ? 'complete' : 'incomplete'}"> ${listItem.hasCompleted ? "Complete" : "Incomplete"}</p>
+            <button class="toggle-complete-btn" onclick="toggleComplete"(${i})">Complete Task</button>
+            <button class="remove-btn" onclick="removeTask(${i})">Remove Task</button>
+        </div>
+        `;
+        taskItem.appendChild(listElement);
+    }
 }
