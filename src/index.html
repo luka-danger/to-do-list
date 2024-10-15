@@ -6,10 +6,28 @@
     <title>Development</title>
 </head>
 <body>
-    <h1>To Do List</h1>
-    <div class="list-container"></div>
-    <div class="add-button">
-        <button id="add-item">Add Task</button>
+    <div class="header">
+        <p>To Do List</p>
     </div>
+    <div>
+    
+    <dialog>
+        <form id="add-task-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+            <label for="has-completed">Have You Completed This Task?</label>
+            <select name="has-completed" id="has-completed">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            <button>Add Task</button>
+        </form> 
+    </div>
+    <div class="add-button">
+        <button id="add-task-btn">Add New Task</button>
+    </div>
+    <div id="tasks"></div>
 </body>
 </html>
