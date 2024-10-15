@@ -12,5 +12,3 @@ document.addEventListener('DOMContentLoaded', () => {
     render();
     makeDialog();
 });
-
-
