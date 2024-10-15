@@ -1,6 +1,7 @@
 // Import Modules
 import List from "./List.js";
 import { render } from "./Render.js";
+import { addTaskToList } from "./AddTask.js";
 
 // Create object array to store tasks
 export let myList = []
@@ -13,18 +14,6 @@ function toggleComplete(index) {
 
 function removeTask(index) {
     myList.splice(index, 1);
-    render();
-}
-
-function addTaskToList() {
-    let title = document.querySelector('#title').value;
-    let description = document.querySelector('#description').value;
-    let hasCompleted = document.querySelector('#has-completed').value;
-    
-    let newTask = new List(title, description, hasCompleted);
-
-    myList.push(newTask);
-
     render();
 }
 
