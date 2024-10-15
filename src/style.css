@@ -1,9 +1,13 @@
+/* Import Font */ 
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+
 html, body {
   height: 100%; 
   overscroll-behavior: contain;
   touch-action: pan-y;
   overflow-x: hidden;
-  background: linear-gradient(to right, white, gray); 
+  /* background: linear-gradient(to right, white, gray); */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(105, 193, 219));
   margin: 0;
 }
 
@@ -12,6 +16,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.25rem;
+  font-family: "Catamaran", sans-serif;
 }
 
 .container {
@@ -23,7 +29,7 @@ body {
 }
 
 .top {
-  background-color: rgba(120, 120, 120, 0.534);
+  background-color: rgba(241, 159, 159, 0.946); 
   width: 100vw;
   height: auto;
 }
@@ -38,6 +44,7 @@ body {
   font-weight: bold;
   margin: 0;
 }
+
 
 #add-task-btn {
   font-size: 1.5rem;
@@ -58,21 +65,51 @@ body {
 button {
   border: 1px solid black;
   border-radius: 8px;
-  padding: .15rem;
-  font-size: 1rem;
+  padding-left: .5rem;
+  font-size: 1.25rem;
+  font-family: "Catamaran", sans-serif;
+  cursor: pointer;
 }
 
+button:hover {
+  background-color: rgb(212, 210, 210);
+}
+
+button:active {
+  background-color: rgb(170, 168, 168);
+}
+
+#tasks {
+  width: 40vw;
+}
+
+.list-card {
+  word-wrap: break-word; /* Allows long words to break onto the next line */
+  overflow-wrap: break-word; /* Same as word-wrap, for better browser compatibility */
+  white-space: normal; 
+}
 
 .complete {
-  background-color: rgba(12, 187, 12, 0.809);
+  background-color: rgba(0, 128, 0, 0.804);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.complete-this {
+  display: none;
 }
 
 .incomplete {
-  background-color: rgba(238, 33, 33, 0.809);
+  background-color: rgba(255, 0, 0, 0.804);
 }
 
-@media (max-width: 170px) {
-  button {
+
+@media (max-width: 236px) {
+  .list-body,
+  .list-buttons, 
+  .list-header {
     display: none;
   }
 }
