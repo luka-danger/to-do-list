@@ -8,8 +8,9 @@ export function addTaskToList() {
     let hasCompleted = document.querySelector('#has-completed').value === 'true';
     
     let newTask = new List(title, description, hasCompleted);
-
     myList.push(newTask);
 
+    localStorage.setItem('myList', JSON.stringify(myList))
+    
     render();
 }

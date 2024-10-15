@@ -7,7 +7,7 @@ export default class List {
         this.hasCompleted = hasCompleted;
     }
 
-    toggleComplete(index) {
+    toggleComplete() {
         this.hasCompleted = !this.hasCompleted;
     }
 }

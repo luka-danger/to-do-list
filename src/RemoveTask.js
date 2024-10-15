@@ -3,6 +3,7 @@ import { render } from "./Render";
 
 export function removeTask(index) {
     myList.splice(index, 1);
+    localStorage.setItem('myList', JSON.stringify(myList))
     render();
 }
 
