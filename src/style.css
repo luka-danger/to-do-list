@@ -37,6 +37,7 @@ body {
 .bottom {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .header {
@@ -45,6 +46,13 @@ body {
   margin: 0;
 }
 
+.footer {
+  width: 100vw;
+  background-color: rgba(241, 159, 159, 0.946); 
+  position: fixed;
+  padding: 0.25rem;
+  bottom: 0;
+}
 
 #add-task-btn {
   font-size: 1.5rem;
@@ -105,6 +113,11 @@ button:active {
   background-color: rgba(255, 0, 0, 0.804);
 }
 
+@media (max-width: 95px) {
+  .list-buttons {
+    margin: 1rem;
+  }
+}
 
 @media (max-width: 236px) {
   .list-body,
