@@ -1,18 +1,84 @@
-.web-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 1.25rem;
+html, body {
+  height: 100%; 
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  overflow-x: hidden;
+  background: linear-gradient(to right, white, gray); 
+  margin: 0;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.top {
+  background-color: rgba(120, 120, 120, 0.534);
+  width: 100vw;
+  height: auto;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+#add-task-btn {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.25rem;
 }
 
 .dialog-box {
-    width: 25%;
+  width: 25%;
 }
 
 button {
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: .25rem;
-    font-size: 1rem;;
-    
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: .15rem;
+  font-size: 1rem;
+}
+
+
+.complete {
+  background-color: rgba(12, 187, 12, 0.809);
+}
+
+.incomplete {
+  background-color: rgba(238, 33, 33, 0.809);
+}
+
+@media (max-width: 170px) {
+  button {
+    display: none;
+  }
+}
+
+@media (max-width: 95px) {
+  .container {
+    display: none;
+  }
 }
