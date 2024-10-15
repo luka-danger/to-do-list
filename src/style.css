@@ -113,10 +113,12 @@ button:active {
   background-color: rgba(255, 0, 0, 0.804);
 }
 
-@media (max-width: 95px) {
-  .list-buttons {
-    margin: 1rem;
+@media (max-width: 677px) {
+  .toggle-complete-btn,
+  .remove-btn {
+    margin-bottom: 0.5rem;
   }
+
 }
 
 @media (max-width: 236px) {
