@@ -1,3 +1,5 @@
+import { toggleComplete } from "./ToggleComplete";
+
 export default class List {
     constructor(title, description, hasCompleted) {
         this.title = title;

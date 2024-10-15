@@ -7,11 +7,6 @@ import { addTaskToList } from "./AddTask.js";
 export let myList = []
 
 
-function toggleComplete(index) {
-    myList[index].toggleComplete();
-    render();
-}
-
 function removeTask(index) {
     myList.splice(index, 1);
     render();
@@ -43,3 +38,4 @@ document.querySelector('#add-task-form').addEventListener('submit', (event) => {
 })
 
 render()
+
