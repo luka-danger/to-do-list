@@ -1,17 +1,8 @@
+// Import Modules
+import List from "./List.js";
+
 // Create object array to store tasks
 let myList = []
-
-class List {
-    constructor(title, description, hasCompleted) {
-        this.title = title;
-        this.description = description;
-        this.hasCompleted = hasCompleted;
-    }
-
-    toggleComplete(index) {
-        this.hasCompleted = !this.hasCompleted;
-    }
-}
 
 function render() {
     let taskItem = document.querySelector('#tasks');
