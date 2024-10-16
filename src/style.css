@@ -1,6 +1,8 @@
 /* Import Font */ 
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
 
+/* HTML and Body Styling */
+
 html, body {
   height: 100%; 
   overscroll-behavior: contain;
@@ -19,6 +21,8 @@ body {
   font-size: 1.25rem;
   font-family: "Catamaran", sans-serif;
 }
+
+/* Containers */
 
 .container {
   margin-bottom: 2rem;
@@ -40,6 +44,8 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Header / Footer */
+
 .header {
   font-size: 3rem;
   font-weight: bold;
@@ -53,6 +59,8 @@ body {
   padding: 0.25rem;
   bottom: 0;
 }
+
+/* Modal */
 
 #add-task-btn {
   font-size: 1.5rem;
@@ -69,6 +77,8 @@ body {
 .dialog-box {
   width: 25%;
 }
+
+/* Buttons */
 
 button {
   border: 1px solid black;
@@ -87,6 +97,8 @@ button:active {
   background-color: rgb(170, 168, 168);
 }
 
+/* To Do List Tasks */
+
 #tasks {
   width: 40vw;
 }
@@ -97,22 +109,29 @@ button:active {
   white-space: normal; 
 }
 
+/* Change background of status to green when task complete */
 .complete {
   background-color: rgba(0, 128, 0, 0.804);
 }
 
+/* Add line through title when task complete */
 .completed {
   text-decoration: line-through;
 }
 
+/* Hide description when task complete */
 .complete-this {
   display: none;
 }
 
+/* Change background of status to red when task incomplete */
 .incomplete {
   background-color: rgba(255, 0, 0, 0.804);
 }
 
+/* Responsive Design */
+
+/* Add space between toggle and remove buttons*/
 @media (max-width: 728px) {
   .toggle-complete-btn,
   .remove-btn {
@@ -121,6 +140,7 @@ button:active {
 
 }
 
+/* Hide task items */
 @media (max-width: 236px) {
   .list-body,
   .list-buttons, 
@@ -129,6 +149,7 @@ button:active {
   }
 }
 
+/* Hide all items */
 @media (max-width: 95px) {
   .container {
     display: none;
