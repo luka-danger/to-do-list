@@ -7,8 +7,8 @@ import { getMyList } from "./TaskManager";
 Function: Add New Task To Do List
 
 Description: Retrieves the current to do list from local storage, collects user input, 
-and adds this task to the list. It then updates the local storage with the new list 
-and triggers render function to dynamically update to do list. 
+and adds this task to the list, updates the local storage with the new list, and 
+triggers render function to dynamically update the page.
 
 Example: Calling `addTaskToList()` after a user fills out the task form will add 
 the new task to the existing list and update the displayed list.
