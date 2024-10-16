@@ -1,11 +1,11 @@
-import { myList } from "./main";
 import { removeTask } from "./RemoveTask";
+import { getMyList } from "./TaskManager";
 
 export function render() {
 
     let taskItem = document.querySelector('#tasks');
     taskItem.innerHTML = "";
-
+    const myList = getMyList();
     for (let i = 0; i < myList.length; i++) {
         let listItem = myList[i];
         let listElement = document.createElement('div');

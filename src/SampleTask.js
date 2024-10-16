@@ -1,7 +1,9 @@
 import List from "./List";
-import { myList } from "./main";
+import { getMyList } from "./TaskManager";
 
 export function addSampleTasks() {
+    const myList = getMyList();
+
     // Add sample list items
     const odinProject = new List("To Do List Project", "Finish Odin Project To Do List.", false);
     const dailyRun = new List("5 mile run", "Easy 5 with 4x30sec hill strides", false);

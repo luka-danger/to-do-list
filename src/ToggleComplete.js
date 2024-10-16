@@ -1,8 +1,9 @@
-import { clearList, myList } from "./main";
 import { render } from "./Render";
+import { getMyList } from "./TaskManager";
 
 
 export function toggleComplete(index) {
+    const myList = getMyList();
     myList[index].toggleComplete();
     localStorage.setItem('myList', JSON.stringify(myList));
     render();
