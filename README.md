@@ -1,8 +1,8 @@
 # To Do List
-## Project 10: To Do List with OOP and SOLID Design 
+## Project 11: To Do List with OOP and SOLID Design 
 
 ## Description: 
-Welcome to my tenth web development project! This is part of my coursework in The Odin Project, a free, open-source curriculum to learn fullstack web development! 
+Welcome to my eleventh web development project! This is part of my coursework in The Odin Project, a free, open-source curriculum to learn fullstack web development! 
 
 This project is a dynamic To-Do List application developed with JavaScript and CSS, bundled using Webpack. It features persistent storage, allowing users to save their tasks in local storage for seamless access across sessions.
 
